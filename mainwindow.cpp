@@ -143,6 +143,11 @@ void MainWindow::setWindowPosition() {
       }
 }
 
+void MainWindow::moveEvent(QMoveEvent *event) {
+    QSettings settings("Nepdate", "NepdateWidget");
+    settings.setValue("MainWindow/pos", this->pos());
+    QMainWindow::moveEvent(event);
+}
 
 MainWindow::~MainWindow()
 {

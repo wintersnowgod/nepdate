@@ -49,6 +49,7 @@ protected:
     void contextMenuEvent(QContextMenuEvent *event) override;
     void exitAll();
     bool eventFilter(QObject *watched, QEvent *event) override;
+    void moveEvent(QMoveEvent *event) override;
 public slots:
     void openCalendarWindow();
 
